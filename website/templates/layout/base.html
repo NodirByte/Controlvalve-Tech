@@ -16,7 +16,8 @@
       crossorigin="anonymous" />
   </head>
   <body>
-    {% include "_navbar.html" %} {% block content %} {% endblock %} {% include "_footer.html" %}
+    {% include "_topbar.html" %} {% include "_navbar.html" %} {% block content %} {% endblock %} {%
+    include "_footer.html" %}
 
     <script src="{% static 'js/script.js' %}"></script>
   </body>
