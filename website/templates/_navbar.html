@@ -1,25 +1,49 @@
 {% load static %}
-<nav class="navbar">
-  <div class="navbar-container">
-    <a href="#"><img src="{% static 'images/logo-white.png' %}" alt="logo" width="80" /></a>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a href="/"
+      ><img src="{% static 'images/logo-white.png' %}" alt="logo" width="50" class="mr-2"
+    /></a>
+    <a class="navbar-brand h1 mx-3" href="/">FEIHANG FLOW CONTROL</a>
 
-    <div class="menu-toggle" id="mobile-menu">
-      <i class="fas fa-bars"></i>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse pl-5" id="navbarScroll">
+      <ul
+        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+        style="--bs-scroll-height: 120px">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="/company"
+            >Company</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="/solutions"
+            >Solutions</a
+          >
+        </li>
+      </ul>
+
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
-    <ul class="nav-menu">
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">COMPANY</a></li>
-      <li><a href="#">PRODUCTS</a></li>
-      <li><a href="#">SOLUTIONS</a></li>
-      <li><a href="#">SUPPORT</a></li>
-      <li><a href="#">NEWS</a></li>
-      <li><a href="#">CONTACT</a></li>
-    </ul>
   </div>
 </nav>
-<script>
-  document.getElementById("mobile-menu").addEventListener("click", function () {
-    const navMenu = document.querySelector(".nav-menu");
-    navMenu.classList.toggle("active");
-  });
-</script>
