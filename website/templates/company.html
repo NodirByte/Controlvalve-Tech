@@ -1,6 +1,74 @@
-{% extends "layout/base.html" %} {% block title %}Company{% endblock %}
+{% extends "layout/base.html" %} {% block title %}Company{% endblock %} {% load static %}
 
 <!-- body -->
 {% block body %}
-<h1>Company page</h1>
+
+<!-- Intro -->
+<div class="px-4 py-5 text-center bg-dark bg-opacity-75">
+  <img class="d-block mx-auto mb-4" src={% static "images/logo.jpg" %} alt="logo" width="20%"
+  height="20%">
+  <h1 class="display-5 fw-bold text-body-white">FEIHANG FLOW CONTROL</h1>
+</div>
+
+<!-- _path -->
+{% include "_path.html" with current_page='Company' %}
+
+<!-- Main -->
+<div class="container col-xxl-8 px-4 py-5">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src={% static "images/logo-white.jpg" %} class="d-block mx-lg-auto img-fluid w-100"
+      alt="Bootstrap Themes" loading="lazy" />
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-3">
+        FEIHANG FLOW CONTROL <br />
+        - A VALVE COMPANY -
+      </h1>
+      <p>
+        Rays Flow Control is your trusted partner for industrial valves. We thrive on a clear
+        mindset to engineer and manufacture world-class valves.
+      </p>
+      <p>
+        With recent expansion in facility, Rays now has about 20,000㎡ of covered workshop. The
+        additions of state-of-art machines and equipment also help us better meet the ever changing
+        demands of the market.
+      </p>
+      <p>
+        Certified with API 6D, API 600, API 602, API 607, API 6FA, ISO9001:2008, ISO 14001:2004,
+        OHSAS 18001:2004 EAC (GOST-R), TS… Rays has developed excellent quality control and
+        management systems to ensure its superior quality and service.
+      </p>
+      <p>
+        At Rays Flow Control, we go extra miles to guarantee quality from its very source: raw
+        material. We own a forging company with our proprietary technology and equipment to produce
+        the raw material with the best quality and competitive price.
+      </p>
+      <p>
+        Rays has built an excellent engineering team. We have retained and attracted the best
+        talents in the industry to help us stay ahead in engineering, R&amp;D, project supports and
+        after sale services for all types of needs from different clients at all stages of the
+        projects.
+      </p>
+      <p>
+        Rays Flow Control has established operations in Houston, USA and Venezuela. Their great
+        track of records gives us the confidence to open more offices and service centers in
+        strategic locations in the near future to better service regional needs.
+      </p>
+      <p>
+        Your needs are what we work hard for. Every day in every way, we at Rays evolve ourselves to
+        be a better supplier and partner when comes to your valves requirements and solutions.
+      </p>
+
+      <div class="btn btn-primary text-left btn_number_75636">
+        <a href="/contact-us" class="text-warning" title="">
+          <i class="fa fa fa-share icon-in-btn"></i>
+          <span class="link">Contact Us</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end of body -->
 {% endblock %}
