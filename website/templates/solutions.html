@@ -2,5 +2,15 @@
 
 <!-- body -->
 {% block body %}
-<h1>solutions page</h1>
+
+<!-- _path -->
+{% include "_path.html" with current_page='Solutions' %}
+
+<!-- _solutions -->
+{% include "_solutions.html" %}
+
+<!-- _quote -->
+{% include "_quote.html" %}
+
+<!-- end_bodu -->
 {% endblock %}

@@ -9,3 +9,6 @@ def company_view(request):
 
 def solutions_view(request):
     return render(request, 'solutions.html')
+    
+def contact_us_view(request):
+    return render(request, 'contact.html')
