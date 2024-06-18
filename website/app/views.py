@@ -13,7 +13,21 @@ def solutions_view(request):
 def contact_us_view(request):
     return render(request, 'contact.html')
     
-def products(request):
-    product_type = request.GET.get('product', 'control_valves')  # Default to control_valves if not specified
-    template_name = f'{product_type}.html'  # Construct template name based on the product type
-    return render(request, template_name)
+products = [
+    {
+        'title': 'Product',
+        'description': 'Product description',
+        'image': 'images/product.jpg',
+    },
+    {
+        'title': 'Product2',
+        'description': 'Product2 description',
+        'image': 'images/product.jpg',
+    }
+]
+    
+def category_view(request, id):
+    return render(request, 'category.html', {'id': id, 'category': 'Control values', 'products': products})
+
+def product_view(request, id):
+    return render(request, 'product.html')

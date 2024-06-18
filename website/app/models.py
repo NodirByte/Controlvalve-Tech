@@ -17,7 +17,7 @@ class SocialAccounts(models.Model):
     class Meta:
         verbose_name = _('Social Account')
         verbose_name_plural = _('Social Accounts')
-        
+
 class Product(models.Model):
     title = models.CharField(_('Title'), max_length=255)
     description = models.TextField(_('Description'))
