@@ -8,6 +8,8 @@
 
 <!-- Products -->
 <div class="containerr mx-5 my-5">
+  <h3 class="fs-2 text-body-emphasis">{{ category }}</h3>
+  <hr class="my-3" />
   <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for p in products %}
     <div class="col">
@@ -15,7 +17,6 @@
         <img src="{% static p.image %}" class="card-img-top" alt="{{ p.title }}" />
         <div class="card-body">
           <h5 class="card-title">{{ p.title }}</h5>
-          <p class="card-text">{{ p.description }}</p>
         </div>
         <div class="card-footer">
           <a href="/contact-us" class="btn btn-outline-primary btn-sm ml-2">GET A QUOTE</a>

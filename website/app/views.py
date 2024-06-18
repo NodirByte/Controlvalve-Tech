@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import SocialAccounts, Product, ProductType
+from .services import products, categories
 
 def base_view(request):
     return render(request, 'main.html')
@@ -12,24 +13,14 @@ def solutions_view(request):
     
 def contact_us_view(request):
     return render(request, 'contact.html')
-    
-products = [
-    {
-        'title': 'Product',
-        'description': 'Product description',
-        'image': 'images/product.jpg',
-        'category': 'Control Valves',
-    },
-    {
-        'title': 'Product2',
-        'description': 'Product2 description',
-        'image': 'images/product.jpg',
-        'category': 'Control Valves',
-    }
-]
-    
+        
 def category_view(request, id):
-    return render(request, 'category.html', {'id': id, 'category': 'Control values', 'products': products})
+    my_products = []
+    for p in products:
+        if p['category'] == categories[id]:
+            my_products.append(p)
+
+    return render(request, 'category.html', {'category': categories[id], 'products': my_products})
 
 def product_view(request, id):
     p = products[id]
