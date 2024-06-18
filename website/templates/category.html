@@ -11,22 +11,24 @@
   <h3 class="fs-2 text-body-emphasis">{{ category }}</h3>
   <hr class="my-3" />
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    {% for p in products %}
-    <div class="col">
+    {% for p, id in products_with_ids %}
+    <div class="col shadow-">
       <div class="card">
-        <img src="{% static p.image %}" class="card-img-top" alt="{{ p.title }}" />
+        <a href="/product/{{ id }}" class="btn btn-outline-secondary btn-sm ml-2">
+          <img src="{% static p.image %}" class="card-img-top" alt="{{ p.title }}"
+        /></a>
         <div class="card-body">
           <h5 class="card-title">{{ p.title }}</h5>
+          <!-- Displaying the product id -->
         </div>
         <div class="card-footer">
           <a href="/contact-us" class="btn btn-outline-primary btn-sm ml-2">GET A QUOTE</a>
-          <a href="/product/1" class="btn btn-outline-secondary btn-sm ml-2">DETAILS</a>
+          <a href="/product/{{ id }}" class="btn btn-outline-secondary btn-sm ml-2">DETAILS</a>
         </div>
       </div>
     </div>
     {% endfor %}
   </div>
 </div>
-
 <!-- end of body -->
 {% endblock %}

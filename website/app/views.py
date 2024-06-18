@@ -13,14 +13,21 @@ def solutions_view(request):
     
 def contact_us_view(request):
     return render(request, 'contact.html')
-        
+
 def category_view(request, id):
     my_products = []
-    for p in products:
+    ids = []
+    for i, p in enumerate(products):
         if p['category'] == categories[id]:
             my_products.append(p)
+            ids.append(i)
 
-    return render(request, 'category.html', {'category': categories[id], 'products': my_products})
+    products_with_ids = list(zip(my_products, ids))
+
+    return render(request, 'category.html', {
+        'category': categories[id],
+        'products_with_ids': products_with_ids
+    })
 
 def product_view(request, id):
     p = products[id]
