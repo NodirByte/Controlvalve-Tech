@@ -18,11 +18,13 @@ products = [
         'title': 'Product',
         'description': 'Product description',
         'image': 'images/product.jpg',
+        'category': 'Control Valves',
     },
     {
         'title': 'Product2',
         'description': 'Product2 description',
         'image': 'images/product.jpg',
+        'category': 'Control Valves',
     }
 ]
     
@@ -30,4 +32,5 @@ def category_view(request, id):
     return render(request, 'category.html', {'id': id, 'category': 'Control values', 'products': products})
 
 def product_view(request, id):
-    return render(request, 'product.html')
+    p = products[id]
+    return render(request, 'product.html', {'id': id, 'product': p, 'path': p['category'] + ' > ' + p['title']})
