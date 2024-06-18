@@ -12,3 +12,8 @@ def solutions_view(request):
     
 def contact_us_view(request):
     return render(request, 'contact.html')
+    
+def products(request):
+    product_type = request.GET.get('product', 'control_valves')  # Default to control_valves if not specified
+    template_name = f'{product_type}.html'  # Construct template name based on the product type
+    return render(request, template_name)

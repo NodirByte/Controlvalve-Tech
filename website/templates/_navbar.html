@@ -1,9 +1,9 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a href="/"
-      ><img src="{% static 'images/logo-white.png' %}" alt="logo" width="50" class="mr-2"
-    /></a>
+    <a class="navbar-brand" href="/">
+      <img src="{% static 'images/logo-white.png' %}" alt="logo" width="50" class="mr-2" />
+    </a>
     <a class="navbar-brand h1 mx-3" href="/">FEIHANG FLOW CONTROL</a>
 
     <button
@@ -26,17 +26,37 @@
         </li>
         <li class="nav-item">
           <a
-            class="nav-link link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            class="nav-link active link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
             href="/company"
             >Company</a
           >
         </li>
         <li class="nav-item">
           <a
-            class="nav-link link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            class="nav-link active link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
             href="/solutions"
             >Solutions</a
           >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Products
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Control Valves</a></li>
+            <li><a class="dropdown-item" href="#">Butterfly Valves</a></li>
+            <li><a class="dropdown-item" href="#">Ball Valves</a></li>
+            <li><a class="dropdown-item" href="#">Gate Valves</a></li>
+            <li><a class="dropdown-item" href="#">Globe Valves</a></li>
+            <li><a class="dropdown-item" href="#">Check Valves</a></li>
+            <li><a class="dropdown-item" href="#">Plug Valves</a></li>
+          </ul>
         </li>
       </ul>
 
