@@ -3,39 +3,36 @@
     <div class="col-lg-7 text-center text-lg-start">
       <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Бесплатная консультация</h1>
       <p class="col-lg-10 fs-4">
-        Если вы хотите связаться с нами и сотрудничать в любом из наших услуг, пожалуйста, свяжитесь
-        с нами.
+        Если вы хотите связаться с нами и сотрудничать в любом из наших услуг, пожалуйста, свяжитесь с нами.
       </p>
     </div>
     <div class="col-md-10 mx-auto col-lg-5">
-      <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+      <!-- Display messages -->
+      {% if messages %}
+        <div class="alert alert-success">
+          {% for message in messages %}
+            <p>{{ message }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+      
+      <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" method="post" action="{% url 'contact_us' %}">
+        {% csrf_token %}
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="name" />
-          <label for="floatingInput">Ваше имя</label>
+          <input type="text" class="form-control" id="id_name" name="name" placeholder="name" />
+          <label for="id_name">Ваше имя</label>
         </div>
         <div class="form-floating mb-3">
-          <input
-            type="email"
-            class="form-control"
-            id="floatingInput"
-            placeholder="name@example.com" />
-          <label for="floatingInput">Адрес электронной почты</label>
+          <input type="email" class="form-control" id="id_email" name="email" placeholder="name@example.com" />
+          <label for="id_email">Адрес электронной почты</label>
         </div>
         <div class="form-floating mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="floatingPassword"
-            placeholder="Phone number" />
-          <label for="floatingPassword">Ваш номер телефона</label>
+          <input type="text" class="form-control" id="id_phone_number" name="phone_number" placeholder="Phone number" />
+          <label for="id_phone_number">Ваш номер телефона</label>
         </div>
         <div class="form-floating mb-3">
-          <textarea
-            class="form-control"
-            placeholder="Оставьте комментарий здесь"
-            style="height: 100px"
-            id="floatingTextarea"></textarea>
-          <label for="floatingTextarea">Особое примечание</label>
+          <textarea class="form-control" placeholder="Оставьте комментарий здесь" style="height: 100px" id="id_special_note" name="special_note"></textarea>
+          <label for="id_special_note">Особое примечание</label>
         </div>
         <button class="w-100 btn btn-lg btn-primary" type="submit">Отправить</button>
       </form>
