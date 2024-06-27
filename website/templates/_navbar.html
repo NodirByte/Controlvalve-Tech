@@ -1,8 +1,8 @@
 {% load static %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3">
   <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" href="/">
-      <img src="{% static 'images/logo-white.png' %}" alt="logo" width="50" class="me-2"/>
+    <a class="navbar-brand d-flex align-items-center" href="/ru">
+      <img src="{% static 'images/logo-white.png' %}" alt="logo" width="50" class="me-2" />
       <span class="h1 fs-5 fs-sm-4 fs-md-2 mb-0">FEIHANG FLOW CONTROL</span>
     </a>
     <button
@@ -17,34 +17,81 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 300px;">
+      <ul
+        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+        style="--bs-scroll-height: 300px">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Главная</a>
+          <a class="nav-link active" aria-current="page" href="/ru">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/company">Компания</a>
+          <a
+            class="nav-link active link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="/company/ru"
+            >Компания</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link active link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/solutions">Решения</a>
+          <a
+            class="nav-link active link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="/solutions/ru"
+            >Решения</a
+          >
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
             Продукты
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/category/0">Регулирующие клапаны</a></li>
-            <li><a class="dropdown-item" href="/category/1">Затворы</a></li>
-            <li><a class="dropdown-item" href="/category/2">Шаровые клапаны</a></li>
-            <li><a class="dropdown-item" href="/category/3">Задвижки</a></li>
-            <li><a class="dropdown-item" href="/category/4">Запорные клапаны</a></li>
-            <li><a class="dropdown-item" href="/category/5">Обратные клапаны</a></li>
-            <li><a class="dropdown-item" href="/category/6">Пробковые клапаны</a></li>
-            <li><a class="dropdown-item" href="/category/7">Специальные клапаны</a></li>
+            <li><a class="dropdown-item" href="/category/0/ru">Регулирующие клапаны</a></li>
+            <li><a class="dropdown-item" href="/category/1/ru">Затворы</a></li>
+            <li><a class="dropdown-item" href="/category/2/ru">Шаровые клапаны</a></li>
+            <li><a class="dropdown-item" href="/category/3/ru">Задвижки</a></li>
+            <li><a class="dropdown-item" href="/category/4/ru">Запорные клапаны</a></li>
+            <li><a class="dropdown-item" href="/category/5/ru">Обратные клапаны</a></li>
+            <li><a class="dropdown-item" href="/category/6/ru">Пробковые клапаны</a></li>
+            <li><a class="dropdown-item" href="/category/7/ru">Специальные клапаны</a></li>
+          </ul>
+        </li>
+        <li></li>
+        <li class="nav-item dropdown">
+          <!-- Language support -->
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            {% if language == 'ru' %}Язык 🌍{% elif language == 'en' %}Language 🌍{% endif %}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {% if language == 'ru' %}
+            <li><a class="dropdown-item" href="{{ request.get_full_path }}en">Английский</a></li>
+            <li>
+              <a class="dropdown-item" href="{{ request.get_full_path }}ru">Русский</a>
+            </li>
+            {% elif language == 'en' %}
+            <li><a class="dropdown-item" href="{{ request.get_full_path }}en">ENGLISH</a></li>
+            <li>
+              <a class="dropdown-item" href="{{ request.get_full_path }}ru">RUSSIAN</a>
+            </li>
+            {% endif %}
           </ul>
         </li>
       </ul>
+
       <form class="d-flex" role="search">
-        <input class="form-control me-2 border-primary" type="search" placeholder="Поиск" aria-label="Поиск" />
+        <input
+          class="form-control me-2 border-primary"
+          type="search"
+          placeholder="Поиск"
+          aria-label="Поиск" />
         <button class="btn btn-primary" type="submit">Поиск</button>
       </form>
     </div>

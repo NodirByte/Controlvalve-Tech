@@ -1,41 +1,69 @@
 {% load static %}
 <div class="container py-5" id="featured-3">
+  {% if language == 'ru' %}
   <h2 class="pb-2 mb-4 border-bottom text-start text-primary">РЕШЕНИЯ</h2>
+  {% elif language == 'en' %}
+  <h2 class="pb-2 mb-4 border-bottom text-start text-primary">SOLUTIONS</h2>
+  {% endif %}
   <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
     <div class="col">
       <div class="card shadow-lg h-100 text-center">
-        <img src="{% static 'images/solution1.jpg' %}" class="card-img-top" alt="img1">
+        <img src="{% static 'images/solution1.jpg' %}" class="card-img-top" alt="img1" />
         <div class="card-body">
+          {% if language == 'ru' %}
           <h5 class="card-title fs-4 my-2 text-primary">Нефть и Газ</h5>
           <p class="card-text">
             Клапаны FEIHANG широко используются для разведки и добычи на верхнем уровне,
             транспортировки на среднем уровне, процесса переработки на нижнем уровне.
           </p>
+          {% elif language == 'en' %}
+          <h5 class="card-title fs-4 my-2 text-primary">Oil and Gas</h5>
+          <p class="card-text">
+            FEIHANG valves are widely used for upstream exploration and production, midstream
+            transportation, and downstream refining processes.
+          </p>
+          {% endif %}
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card shadow-lg h-100 text-center">
-        <img src="{% static 'images/solution2.jpg' %}" class="card-img-top" alt="img2">
+        <img src="{% static 'images/solution2.jpg' %}" class="card-img-top" alt="img2" />
         <div class="card-body">
+          {% if language == 'ru' %}
           <h5 class="card-title fs-4 my-2 text-primary">Химическая Промышленность</h5>
           <p class="card-text">
             Используйте клапан FEIHANG для улучшения массовых процессов и поддержания работы между
             обслуживанием катализатора или сосуда.
           </p>
+          {% elif language == 'en' %}
+          <h5 class="card-title fs-4 my-2 text-primary">Chemical Industry</h5>
+          <p class="card-text">
+            Use FEIHANG valves to improve mass processes and maintain operation between catalyst or
+            vessel maintenance.
+          </p>
+          {% endif %}
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card shadow-lg h-100 text-center">
-        <img src="{% static 'images/solution3.jpg' %}" class="card-img-top" alt="img3">
+        <img src="{% static 'images/solution3.jpg' %}" class="card-img-top" alt="img3" />
         <div class="card-body">
+          {% if language == 'ru' %}
           <h5 class="card-title fs-4 my-2 text-primary">Вода</h5>
           <p class="card-text">
-            FEIHANG предлагает клиентам комплексные решения для каждого этапа водного цикла. Продукты
-            и услуги FEIHANG помогают клиентам оптимизировать производство и трубопроводные
+            FEIHANG предлагает клиентам комплексные решения для каждого этапа водного цикла.
+            Продукты и услуги FEIHANG помогают клиентам оптимизировать производство и трубопроводные
             сооружения.
           </p>
+          {% elif language == 'en' %}
+          <h5 class="card-title fs-4 my-2 text-primary">Water</h5>
+          <p class="card-text">
+            FEIHANG offers comprehensive solutions for each stage of the water cycle. FEIHANG
+            products and services help customers optimize production and pipeline facilities.
+          </p>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -43,38 +71,62 @@
   <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 mt-4">
     <div class="col">
       <div class="card shadow-lg h-100 text-center">
-        <img src="{% static 'images/solution4.jpg' %}" class="card-img-top" alt="img4">
+        <img src="{% static 'images/solution4.jpg' %}" class="card-img-top" alt="img4" />
         <div class="card-body">
+          {% if language == 'ru' %}
           <h5 class="card-title fs-4 my-2 text-primary">Горная Промышленность</h5>
           <p class="card-text">
             Вам нужно оборудование и услуги, которые выдержат любые испытания, и FEIHANG может
             справиться с исключительными требованиями времени безотказной работы в горной
             промышленности.
           </p>
+          {% elif language == 'en' %}
+          <h5 class="card-title fs-4 my-2 text-primary">Mining Industry</h5>
+          <p class="card-text">
+            You need equipment and services that can withstand any test, and FEIHANG can handle the
+            exceptional uptime demands of the mining industry.
+          </p>
+          {% endif %}
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card shadow-lg h-100 text-center">
-        <img src="{% static 'images/solution5.jpg' %}" class="card-img-top" alt="img5">
+        <img src="{% static 'images/solution5.jpg' %}" class="card-img-top" alt="img5" />
         <div class="card-body">
+          {% if language == 'ru' %}
           <h5 class="card-title fs-4 my-2 text-primary">СПГ</h5>
           <p class="card-text">
             FEIHANG производит клапаны, которые выдерживают экстремальные низкотемпературные суровые
             условия, предлагая отличное решение для предприятий сжиженного природного газа.
           </p>
+          {% elif language == 'en' %}
+          <h5 class="card-title fs-4 my-2 text-primary">LNG</h5>
+          <p class="card-text">
+            FEIHANG manufactures valves that withstand extreme low-temperature harsh conditions,
+            offering excellent solutions for liquefied natural gas enterprises.
+          </p>
+          {% endif %}
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card shadow-lg h-100 text-center">
-        <img src="{% static 'images/solution6.jpg' %}" class="card-img-top" alt="img6">
+        <img src="{% static 'images/solution6.jpg' %}" class="card-img-top" alt="img6" />
         <div class="card-body">
+          {% if language == 'ru' %}
           <h5 class="card-title fs-4 my-2 text-primary">Энергетика</h5>
           <p class="card-text">
             У нас есть многолетний опыт предоставления клиентам продуктов, ориентированных на
             безопасность, и надежного обслуживания в энергетической отрасли.
           </p>
+          {% elif language == 'en' %}
+          <h5 class="card-title fs-4 my-2 text-primary">Energy</h5>
+          <p class="card-text">
+            We have many years of experience providing customers with safety-oriented products and
+            reliable services in the energy industry.
+          </p>
+          {% endif %}
         </div>
       </div>
     </div>

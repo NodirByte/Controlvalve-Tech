@@ -14,16 +14,27 @@
     {% for p, id in products_with_ids %}
     <div class="col shadow-">
       <div class="card">
-        <a href="/product/{{ id }}" class="btn btn-outline-secondary btn-sm ml-2">
+        {% if language == 'ru' %}
+        <a href="/product/{{ id }}/ru" class="btn btn-outline-secondary btn-sm ml-2">
           <img src="{% static p.image %}" class="card-img-top" alt="{{ p.title }}"
         /></a>
+        {% elif language == 'en' %}
+        <a href="/product/{{ id }}/en" class="btn btn-outline-secondary btn-sm ml-2">
+          <img src="{% static p.image %}" class="card-img-top" alt="{{ p.title }}"
+        /></a>
+        {% endif %}
         <div class="card-body">
           <h5 class="card-title">{{ p.title }}</h5>
           <!-- Displaying the product id -->
         </div>
         <div class="card-footer">
-          <a href="/contact-us" class="btn btn-outline-primary btn-sm ml-2">ПОЛУЧИТЬ ЦЕНУ</a>
-          <a href="/product/{{ id }}" class="btn btn-outline-secondary btn-sm ml-2">ПОДРОБНО</a>
+          {% if language == 'ru' %}
+          <a href="/contact-us/ru" class="btn btn-outline-primary btn-sm ml-2">ПОЛУЧИТЬ ЦЕНУ</a>
+          <a href="/product/{{ id }}/ru" class="btn btn-outline-secondary btn-sm ml-2">ПОДРОБНО</a>
+          {% elif language == 'en' %}
+          <a href="/contact-us/en" class="btn btn-outline-primary btn-sm ml-2">GET A QUOTE</a>
+          <a href="/product/{{ id }}/en" class="btn btn-outline-secondary btn-sm ml-2">DETAILS</a>
+          {% endif %}
         </div>
       </div>
     </div>

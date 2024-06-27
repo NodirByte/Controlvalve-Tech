@@ -1,0 +1,28 @@
+{% load static %}
+<div class="container mb-5">
+  {% if language == 'ru' %}
+  <h2 class="pb-2 border-bottom">НАШИ ПАРТНЕРЫ</h2>
+  {% elif language == 'en' %}
+  <h2 class="pb-2 border-bottom">OUR PARTNERS</h2>
+  {% endif %}
+  <div class="row row-cols-3 row-cols-lg-6 g-1">
+    <div class="col shadow-sm">
+      <img class="w-100" src="{% static 'images/partner1.jpg' %}" alt="partner-logo" />
+    </div>
+    <div class="col shadow-sm">
+      <img class="w-100" src="{% static 'images/partner2.jpg' %}" alt="partner-logo" />
+    </div>
+    <div class="col shadow-sm">
+      <img class="w-100" src="{% static 'images/partner3.jpg' %}" alt="partner-logo" />
+    </div>
+    <div class="col shadow-sm">
+      <img class="w-100" src="{% static 'images/partner4.jpg' %}" alt="partner-logo" />
+    </div>
+    <div class="col shadow-sm">
+      <img class="w-100" src="{% static 'images/partner5.jpg' %}" alt="partner-logo" />
+    </div>
+    <div class="col shadow-sm">
+      <img class="w-100" src="{% static 'images/partner6.jpg' %}" alt="partner-logo" />
+    </div>
+  </div>
+</div>

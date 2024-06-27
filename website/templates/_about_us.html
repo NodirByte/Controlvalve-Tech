@@ -1,0 +1,43 @@
+{% load static %}
+<div class="container col-xxl-8 px-4 py-5">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6 mx-auto">
+      <img src={% static 'images/valve2.jpg' %} class="d-block mx-lg-auto img-fluid" alt="Bootstrap
+      Themes" width="700" height="500" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      {% if language == 'ru' %}
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">О НАС</h1>
+      <p class="lead">
+        FEIHANG FLOW CONTROL - это высокотехнологичная компания, специализирующаяся на новых
+        технологиях, которая занимается проектированием, производством и продажей промышленных
+        клапанов на международный рынок, который включает в себя: нефтегазовую,
+        нефтеперерабатывающую, химическую, электростанцию ​​и т. д.
+      </p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a href="/contact-us/ru" type="button" class="btn btn-primary btn-lg px-4 me-md-2"
+          >Связаться с нами</a
+        >
+        <a href="/company/ru" type="button" class="btn btn-outline-secondary btn-lg px-4"
+          >Компания</a
+        >
+      </div>
+      {% elif language == 'en' %}
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">ABOUT US</h1>
+      <p class="lead">
+        FEIHANG FLOW CONTROL is a high-tech company specializing in new technologies, engaged in the
+        design, manufacture, and sale of industrial valves to the international market, which
+        includes: oil and gas, refining, chemical, power plant, etc.
+      </p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a href="/contact-us/en" type="button" class="btn btn-primary btn-lg px-4 me-md-2"
+          >Contact us</a
+        >
+        <a href="/company/en" type="button" class="btn btn-outline-secondary btn-lg px-4"
+          >Company</a
+        >
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

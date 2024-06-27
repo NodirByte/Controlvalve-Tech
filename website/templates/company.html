@@ -1,4 +1,5 @@
-{% extends "layout/base.html" %} {% block title %}Company{% endblock %} {% load static %}
+{% extends "layout/base.html" %} {% block title %} {% if language == 'ru' %} Компания {% elif
+language == 'en' %} Company {% endif %} {% endblock %} {% load static %}
 
 <!-- body -->
 {% block body %}
@@ -11,7 +12,9 @@
 </div>
 
 <!-- _path -->
-{% include "_path.html" with current_page='Компания' %}
+{% if language == 'ru' %} {% include "_path.html" with current_page='Компания' %}
+<!-- elif -->
+{% elif language == 'en' %} {% include "_path.html" with current_page='Company' %} {% endif %}
 
 <!-- Main -->
 <div class="container col-xxl-8 px-4 py-5">
@@ -22,6 +25,7 @@
     </div>
     <div class="col-lg-6">
       <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-3">FEIHANG FLOW CONTROL</h1>
+      {% if language == 'ru' %}
       <p>
         Feihang Flow Control - ваш надежный партнер для промышленных клапанов. Мы стремимся к
         четкому мышлению, чтобы проектировать и производить клапаны мирового класса.
@@ -57,13 +61,53 @@
         совершенствуемся, чтобы быть лучшим поставщиком и партнером в удовлетворении ваших
         требований и решений в отношении клапанов.
       </p>
-
       <div class="btn btn-primary text-left btn_number_75636">
-        <a href="/contact-us" class="text-warning" title="">
+        <a href="/contact-us/ru" class="text-warning" title="">
           <i class="fa fa fa-share icon-in-btn"></i>
           <span class="link">СВЯЗАТЬСЯ С НАМИ</span>
         </a>
       </div>
+      {% elif language == 'en' %}
+      <p>
+        Feihang Flow Control - your reliable partner for industrial valves. We strive for clear
+        thinking to design and manufacture world-class valves.
+      </p>
+      <p>
+        With the recent expansion of Feihang's production capacity, it now has about 20,000㎡ of
+        covered workshop. The addition of modern equipment also helps us better meet the
+        ever-changing market demands.
+      </p>
+      <p>
+        Certified by API 6D, API 600, API 602, API 607, API 6FA, ISO9001:2008, ISO 14001:2004, OHSAS
+        18001:2004 EAC (GOST-R), TS... Feihang has developed excellent quality control and
+        management systems to ensure the highest quality and service.
+      </p>
+      <p>
+        At Feihang Flow Control, we go the extra mile to ensure quality from the very source: raw
+        materials. We own a forging plant with our technology and equipment to produce the highest
+        quality raw materials at a competitive price.
+      </p>
+      <p>
+        Feihang has created an excellent engineering team. We have retained and attracted the best
+        specialists in the industry to help us remain leaders in engineering, R&D, project support,
+        and after-sales service for all types of client needs at all project stages.
+      </p>
+      <p>
+        Feihang Flow Control has established representative offices in Houston, USA, and Venezuela.
+        Their excellent track record gives us confidence in opening new offices and service centers
+        in strategic locations in the near future to better serve regional needs.
+      </p>
+      <p>
+        Your needs are what we work hard for. Every day and in everything, we at Feihang strive to
+        be the best supplier and partner in meeting your valve needs and solutions.
+      </p>
+      <div class="btn btn-primary text-left btn_number_75636">
+        <a href="/contact-us/en" class="text-warning" title="">
+          <i class="fa fa fa-share icon-in-btn"></i>
+          <span class="link">CONTACT US</span>
+        </a>
+      </div>
+      {% endif %}
     </div>
   </div>
 </div>

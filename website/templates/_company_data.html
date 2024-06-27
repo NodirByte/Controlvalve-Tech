@@ -1,0 +1,62 @@
+{% load static %}
+<div class="mx-auto position-relative text-white">
+  <img src="{% static 'images/valve15.jpg' %}" alt="img1" class="img-fluid w-100" />
+  <div
+    class="container-fluid position-absolute top-50 start-50 translate-middle text-center bg-dark bg-opacity-50 w-100 rounded">
+    <div class="d-none d-md-block">
+      {% if language == 'ru' %}
+      <p class="display-6 mb-2">Служим в экстремальных условиях ради лучшего мира.<br /></p>
+      <p class="h3 my-3">FEIHANG FLOW CONTROL</p>
+      {% elif language == 'en' %}
+      <p class="display-6 mb-2">Serving in extreme conditions for a better world.<br /></p>
+      <p class="h3 my-3">FEIHANG FLOW CONTROL</p>
+      {% endif %}
+    </div>
+    <div class="container-fluid text-start">
+      <div class="row g-1 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start bg-dark bg-opacity-50">
+          <div class="bg-dark bg-opacity-100 p-3 rounded me-3">
+            <i class="fs-2 text-primary fas fa-map-marker-alt mt-2"></i>
+          </div>
+          <div>
+            {% if language == 'ru' %}
+            <p class="h6 mb-1">Посетите нас</p>
+            <p class="fs-5 fw-bold">Tashkent/Uzbekistan</p>
+            {% elif language == 'en' %}
+            <p class="h6 mb-1">Visit us</p>
+            <p class="fs-5 fw-bold">Tashkent/Uzbekistan</p>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col d-flex align-items-start bg-dark bg-opacity-50">
+          <div class="bg-dark bg-opacity-90 p-3 rounded me-3">
+            <i class="fs-2 text-primary fas fa-envelope mt-2"></i>
+          </div>
+          <div>
+            {% if language == 'ru' %}
+            <p class="h6 mb-1">Свяжитесь с нами по e-mail</p>
+            <p class="fs-5 fw-bold">wenzhou@feihangflow.com</p>
+            {% elif language == 'en' %}
+            <p class="h6 mb-1">Contact us via email</p>
+            <p class="fs-5 fw-bold">wenzhou@feihangflow.com</p>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col d-flex align-items-start bg-dark bg-opacity-50">
+          <div class="bg-dark bg-opacity-90 p-3 rounded me-3">
+            <i class="fs-2 text-primary fas fa-phone-alt mt-2"></i>
+          </div>
+          <div>
+            {% if language == 'ru' %}
+            <p class="h6 mb-1">Позвоните нам</p>
+            <p class="fs-5 fw-bold">+998 93 321 33 16</p>
+            {% elif language == 'en' %}
+            <p class="h6 mb-1">Call us</p>
+            <p class="fs-5 fw-bold">+998 93 321 33 16</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

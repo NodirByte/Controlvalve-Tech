@@ -57,97 +57,12 @@
   {% include "_solutions.html" %}
 
   <!-- About us -->
-  <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6 mx-auto">
-        <img src={% static 'images/valve2.jpg' %} class="d-block mx-lg-auto img-fluid"
-        alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-      </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">О НАС</h1>
-        <p class="lead">
-          FEIHANG FLOW CONTROL - это высокотехнологичная компания, специализирующаяся на новых
-          технологиях, которая занимается проектированием, производством и продажей промышленных
-          клапанов на международный рынок, который включает в себя: нефтегазовую,
-          нефтеперерабатывающую, химическую, электростанцию ​​и т. д.
-        </p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <a href="/contact-us" type="button" class="btn btn-primary btn-lg px-4 me-md-2"
-            >Contact us</a
-          >
-          <a href="/company" type="button" class="btn btn-outline-secondary btn-lg px-4">Company</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include "_about_us.html" %}
 
   <!-- Partners -->
-  <div class="container mb-5">
-    <h2 class="pb-2 border-bottom">НАШИ ПАРТНЕРЫ</h2>
-    <div class="row row-cols-3 row-cols-lg-6 g-1">
-      <div class="col shadow-sm">
-        <img class="w-100" src="{% static 'images/partner1.jpg' %}" alt="partner-logo" />
-      </div>
-      <div class="col shadow-sm">
-        <img class="w-100" src="{% static 'images/partner2.jpg' %}" alt="partner-logo" />
-      </div>
-      <div class="col shadow-sm">
-        <img class="w-100" src="{% static 'images/partner3.jpg' %}" alt="partner-logo" />
-      </div>
-      <div class="col shadow-sm">
-        <img class="w-100" src="{% static 'images/partner4.jpg' %}" alt="partner-logo" />
-      </div>
-      <div class="col shadow-sm">
-        <img class="w-100" src="{% static 'images/partner5.jpg' %}" alt="partner-logo" />
-      </div>
-      <div class="col shadow-sm">
-        <img class="w-100" src="{% static 'images/partner6.jpg' %}" alt="partner-logo" />
-      </div>
-    </div>
-  </div>
+  {% include "_partners.html" %}
 
   <!-- Company data -->
-  <div class="mx-auto position-relative text-white">
-    <img src="{% static 'images/valve15.jpg' %}" alt="img1" class="img-fluid w-100" />
-    <div
-      class="container-fluid position-absolute top-50 start-50 translate-middle text-center bg-dark bg-opacity-50 w-100 rounded">
-      <div class="d-none d-md-block">
-        <p class="display-6 mb-2">Служим в экстремальных условиях ради лучшего мира. <br /></p>
-        <p class="h3 my-3">FEIHANG FLOW CONTROL</p>
-      </div>
-
-      <div class="container-fluid text-start">
-        <div class="row g-1 row-cols-1 row-cols-lg-3">
-          <div class="col d-flex align-items-start bg-dark bg-opacity-50">
-            <div class="bg-dark bg-opacity-100 p-3 rounded me-3">
-              <i class="fs-2 text-primary fas fa-map-marker-alt mt-2"></i>
-            </div>
-            <div>
-              <p class="h6 mb-1">Посетите нас</p>
-              <p class="fs-5 fw-bold">Tashkent/Uzbekistan</p>
-            </div>
-          </div>
-          <div class="col d-flex align-items-start bg-dark bg-opacity-50">
-            <div class="bg-dark bg-opacity-90 p-3 rounded me-3">
-              <i class="fs-2 text-primary fas fa-envelope mt-2"></i>
-            </div>
-            <div>
-              <p class="h6 mb-1">Свяжитесь с нами по e-mail</p>
-              <p class="fs-5 fw-bold">wenzhou@feihangflow.com</p>
-            </div>
-          </div>
-          <div class="col d-flex align-items-start bg-dark bg-opacity-50">
-            <div class="bg-dark bg-opacity-90 p-3 rounded me-3">
-              <i class="fs-2 text-primary fas fa-phone-alt mt-2"></i>
-            </div>
-            <div>
-              <p class="h6 mb-1">Позвоните нам</p>
-              <p class="fs-5 fw-bold">+998 93 321 33 16</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include "_company_data.html" %}
 </main>
 {% endblock %}
