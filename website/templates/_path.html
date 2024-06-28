@@ -1,7 +1,11 @@
 <!-- As a link -->
 <div class="container-fluid bg-primary bg-opacity-50">
   <div class="nav mx-md-5">
-    <a href="/" class="nav-link link-dark">Главная ></a>
-    <a href="/company" class="nav-link link-secondary disabled">{{ current_page }}</a>
+    <a href="/{{ language }}" class="nav-link link-dark"
+      >{% if language == 'en' %}Home{% else %}Главная{% endif %} ></a
+    >
+    <a href="/company/{{ language }}" class="nav-link link-secondary disabled"
+      >{{ current_page }}</a
+    >
   </div>
 </div>

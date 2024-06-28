@@ -5,17 +5,20 @@ from django.http import HttpResponse
 from django.contrib import messages
 import requests
 
-BOT_TOKEN = '7273119160:AAGbaipGb4Q_myfZo1GoLe48aKktB08Y4tw'
+BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE'  # Replace with your actual bot token
 ADMIN_IDs = ['1180612659', '2367366']
 
 def base_view(request, lan):
-    return render(request, 'main.html', {'language': lan})
+    current_url = request.get_full_path()[:-3]  # Get current URL path without last 3 characters
+    return render(request, 'main.html', {'language': lan, 'current_url': current_url})
 
 def company_view(request, lan):
-    return render(request, 'company.html', {'language': lan})
+    current_url = request.get_full_path()[:-3]  # Get current URL path without last 3 characters
+    return render(request, 'company.html', {'language': lan, 'current_url': current_url})
 
 def solutions_view(request, lan):
-    return render(request, 'solutions.html', {'language': lan})
+    current_url = request.get_full_path()[:-3]  # Get current URL path without last 3 characters
+    return render(request, 'solutions.html', {'language': lan, 'current_url': current_url})
 
 def contact_us_view(request, lan):
     if request.method == 'POST':
@@ -34,7 +37,8 @@ def contact_us_view(request, lan):
 
         return redirect('contact_us', lan=lan)
 
-    return render(request, 'contact.html', {'language': lan})
+    current_url = request.get_full_path()[:-3]  # Get current URL path without last 3 characters
+    return render(request, 'contact.html', {'language': lan, 'current_url': current_url})
 
 def category_view(request, id, lan):
     my_products = []
@@ -46,17 +50,21 @@ def category_view(request, id, lan):
 
     products_with_ids = list(zip(my_products, ids))
 
+    current_url = request.get_full_path()[:-3]  # Get current URL path without last 3 characters
     return render(request, 'category.html', {
         'category': categories[id],
         'products_with_ids': products_with_ids,
-        'language': lan
+        'language': lan,
+        'current_url': current_url
     })
 
 def product_view(request, id, lan):
     p = products[id]
+    current_url = request.get_full_path()[:-3]  # Get current URL path without last 3 characters
     return render(request, 'product.html', {
         'id': id, 
         'product': p, 
         'path': p['category'] + ' > ' + p['title'],
-        'language': lan
+        'language': lan,
+        'current_url': current_url
     })

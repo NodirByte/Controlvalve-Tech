@@ -4,7 +4,9 @@
 {% block body %}
 
 <!-- _path -->
-{% include "_path.html" with current_page='Решения' %}
+{% if language == 'ru' %} {% include "_path.html" with current_page='Решения' %}
+<!-- elif -->
+{% elif language == 'en' %} {% include "_path.html" with current_page='Solutions' %} {% endif %}
 
 <!-- _solutions -->
 {% include "_solutions.html" %}

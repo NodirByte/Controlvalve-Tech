@@ -6,7 +6,9 @@
       ><i class="text-primary fas fa-phone-alt"></i> +998 (93) 1234567</span
     >
     <span class="text-white mx-2"
-      ><i class="text-primary fas fa-map-marker-alt mr-1"></i>Tashkent/Uzbekistan</span
+      ><i class="text-primary fas fa-map-marker-alt mr-1"></i>
+      <!-- Language checking -->
+      {% if language == 'en' %}Tashkent/Uzbekistan{% else %} Ташкент/Узбекистан{% endif %}</span
     >
     <span class="text-white mx-2"
       ><i class="text-primary fas fa-envelope"></i> wenzhou@feihangflow.com</span
@@ -29,6 +31,8 @@
   </div>
 
   <div>
-    <a href="/contact-us" class="btn btn-primary btn-sm ml-2">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+    <a href="/contact-us/{{ language }}" class="btn btn-primary btn-sm ml-2"
+      >{% if language == 'en' %}GET A QUOTE{% else %}ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ{% endif %}</a
+    >
   </div>
 </nav>
