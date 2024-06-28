@@ -1,26 +1,37 @@
 from django.shortcuts import render, redirect
 from .models import SocialAccounts, Product, ProductType
 from .services import products, categories, products_en, categories_en
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.contrib import messages
 import requests
 
 BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE'  # Replace with your actual bot token
 ADMIN_IDs = ['1180612659', '2367366']
 
+def validate_language(lan):
+    if lan not in ['en', 'ru']:
+        raise Http404("Language not supported")
+
+def pre_base_view(request):
+    return redirect('base', lan='ru')
+
 def base_view(request, lan):
+    validate_language(lan)
     current_url = request.get_full_path()[:-3]  # Get current URL path without last 3 characters
     return render(request, 'main.html', {'language': lan, 'current_url': current_url})
 
 def company_view(request, lan):
+    validate_language(lan)
     current_url = request.get_full_path()[:-3]  # Get current URL path without last 3 characters
     return render(request, 'company.html', {'language': lan, 'current_url': current_url})
 
 def solutions_view(request, lan):
+    validate_language(lan)
     current_url = request.get_full_path()[:-3]  # Get current URL path without last 3 characters
     return render(request, 'solutions.html', {'language': lan, 'current_url': current_url})
 
 def contact_us_view(request, lan):
+    validate_language(lan)
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -41,6 +52,7 @@ def contact_us_view(request, lan):
     return render(request, 'contact.html', {'language': lan, 'current_url': current_url})
 
 def category_view(request, id, lan):
+    validate_language(lan)
     my_products = []
     ids = []
     language = request.get_full_path()[-3:]
@@ -67,6 +79,7 @@ def category_view(request, id, lan):
     })
 
 def product_view(request, id, lan):
+    validate_language(lan)
     language = request.get_full_path()[-3:]
     if 'en/' == language : 
         prod = products_en
