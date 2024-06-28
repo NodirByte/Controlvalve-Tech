@@ -2,8 +2,8 @@
 <div class="container-fluid">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-6 d-flex align-items-center">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-decoration-none">
-        <img src="{% static 'images/logo.jpg' %}" alt="logo" width="50" class="me-2 rounded-circle" />
+      <a href="{% if language == 'en' %}/en/{% else %}/ru/{% endif %}" class="mb-3 me-2 mb-md-0 text-decoration-none">
+        <img src="{% static 'images/logo.jpg' %}" alt="logo" width="70" class="me-2 rounded-circle" />
       </a>
       <span class="mb-3 mb-md-0 text-body-secondary lh-1">
         © 2024 FEIHANG FLOW CONTROL, <br>
@@ -13,16 +13,44 @@
 
     <ul class="nav col-md-6 justify-content-md-end mt-2 mt-md-0">
       <li class="nav-item">
-        <a class="nav-link text-body-secondary" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="nav-link text-body-secondary" href="{% if language == 'en' %}/category/0/en{% else %}/category/0/ru{% endif %}">
+          {% if language == 'en' %}Regulating Valves{% else %}Регулирующие клапаны{% endif %}
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-body-secondary" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="nav-link text-body-secondary" href="{% if language == 'en' %}/category/1/en{% else %}/category/1/ru{% endif %}">
+          {% if language == 'en' %}Valves{% else %}Затворы{% endif %}
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-body-secondary" href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a class="nav-link text-body-secondary" href="{% if language == 'en' %}/category/2/en{% else %}/category/2/ru{% endif %}">
+          {% if language == 'en' %}Ball Valves{% else %}Шаровые клапаны{% endif %}
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-body-secondary" href="#"><i class="fab fa-youtube"></i></a>
+        <a class="nav-link text-body-secondary" href="{% if language == 'en' %}/category/3/en{% else %}/category/3/ru{% endif %}">
+          {% if language == 'en' %}Gate Valves{% else %}Задвижки{% endif %}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-body-secondary" href="{% if language == 'en' %}/category/4/en{% else %}/category/4/ru{% endif %}">
+          {% if language == 'en' %}Check Valves{% else %}Обратные клапаны{% endif %}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-body-secondary" href="{% if language == 'en' %}/category/5/en{% else %}/category/5/ru{% endif %}">
+          {% if language == 'en' %}Butterfly Valves{% else %}Бабочковые клапаны{% endif %}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-body-secondary" href="{% if language == 'en' %}/category/6/en{% else %}/category/6/ru{% endif %}">
+          {% if language == 'en' %}Strainers{% else %}Фильтры{% endif %}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-body-secondary" href="{% if language == 'en' %}/category/7/en{% else %}/category/7/ru{% endif %}">
+          {% if language == 'en' %}Expansion Joints{% else %}Компенсаторы{% endif %}
+        </a>
       </li>
     </ul>
   </footer>

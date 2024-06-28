@@ -1,4 +1,8 @@
-{% extends "layout/base.html" %} {% block title %}Product{% endblock %} {% load static %}
+{% extends "layout/base.html" %}
+
+{% block title %}Product{% endblock %}
+
+{% load static %}
 
 <!-- body -->
 {% block body %}
@@ -8,22 +12,18 @@
 
 <!-- product details -->
 <div class="container my-5">
-  <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-    <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-sm">
-      <img class="rounded-lg-3 w-100" src="{% static product.image %}" alt="{{ product.title }}" />
+  <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 shadow-lg bg-white">
+    <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-sm rounded">
+      <img class="img-fluid rounded-lg w-100" src="{% static product.image %}" alt="{{ product.title }}">
     </div>
     <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-      <h1 class="display-4 fw-bold lh-1 text-body-emphasis">{{ product.title }}</h1>
-      <p class="lead">{{ product.description|linebreaks|safe }}</p>
+      <h1 class="display-4 fw-bold lh-1 text-primary">{{ product.title }}</h1>
+      <p class="lead text-muted">{{ product.description|linebreaks|safe }}</p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
         {% if language == 'ru' %}
-        <a href="/contact-us/ru" type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold"
-          >ПОЛУЧИТЬ ЦЕНУ</a
-        >
+          <a href="/contact-us/ru" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold shadow-sm">ПОЛУЧИТЬ ЦЕНУ</a>
         {% elif language == 'en' %}
-        <a href="/contact-us/en" type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold"
-          >GET A QUOTE</a
-        >
+          <a href="/contact-us/en" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold shadow-sm">GET A QUOTE</a>
         {% endif %}
       </div>
     </div>
