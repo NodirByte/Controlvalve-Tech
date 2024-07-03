@@ -51,6 +51,80 @@ products = [
         'image': 'images/product4.jpg',
         'category': categories[1],
     },
+        {
+        'title': 'API 6D ПОЛНОСТЬЮ СВАРНОЙ ШАРОВЫЙ КРАН',
+        'description': """Применимые стандарты:
+            ПРОЕКТИРОВАНИЕ И ИЗГОТОВЛЕНИЕ СООТВЕТСТВУЕТ: API 6D/ISO 14313, ASME B16.34
+            РАЗМЕР СОЕДИНЕНИЯ СООТВЕТСТВУЕТ: ASME B16.25, DIN EN 12627
+            ПРОЕКТИРОВАНИЕ С ОГНЕСТОЙКОСТЬЮ СООТВЕТСТВУЕТ: API 607/ISO 10497
+            ИНСПЕКЦИЯ И ИСПЫТАНИЕ СООТВЕТСТВУЕТ: API 6D, ISO 5208, API 598
+            МАТЕРИАЛ СООТВЕТСТВУЕТ: ISO 15156
+            ТЕМПЕРАТУРНЫЙ ДИАПАЗОН: -196°C~200°C""",
+        'image': 'images/ballv1.jpg',
+        'category': categories[2],
+    },
+    {
+        'title': 'API 6D ВЕРХНИЙ ВХОД ШАРОВОЙ КРАН',
+        'description': """Применимые стандарты:
+            ПРОЕКТИРОВАНИЕ И ИЗГОТОВЛЕНИЕ СООТВЕТСТВУЕТ: API 6D/ISO 14313, ASME B16.34
+            РАЗМЕР СОЕДИНЕНИЯ СООТВЕТСТВУЕТ: ASME B16.5, DN EN 1092
+            ПРОЕКТИРОВАНИЕ С ОГНЕСТОЙКОСТЬЮ СООТВЕТСТВУЕТ: API 607/ISO 10497
+            ИНСПЕКЦИЯ И ИСПЫТАНИЕ СООТВЕТСТВУЕТ: API 6D, ISO 5208, API 598
+            МАТЕРИАЛ СООТВЕТСТВУЕТ: ISO 15156
+            ОСОБЕННОСТИ КОНСТРУКЦИИ: ВЕРХНИЙ ВХОД, ПОЛНЫЙ ПРОХОД, ШАРОВЫЙ КРАН С ПОДШИПНИКОМ, ДВОЙНОЙ БЛОК И СТРАВЛИВАНИЕ, ЭКСТРЕННИЙ ВПРЫСК УПЛОТНЕНИЯ, КРИОГЕННЫЙ, УДЛИНЕННЫЙ КОЛПАК, РЕДУКТОРНОЕ УПРАВЛЕНИЕ, ФЛАНЦЕВЫЕ ИЛИ СВАРНЫЕ КОНЦЫ, ДОСТУПЕН С ОПЕРАТОРОМ BG
+            ТЕМПЕРАТУРНЫЙ ДИАПАЗОН: -196°C~200°C""",
+        'image': 'images/ballv2.jpg',
+        'category': categories[2],
+    },
+    {
+        'title': 'API 6D ВЕРХНИЙ ВХОД ШАРОВОЙ КРАН',
+        'description': """Применимые стандарты:
+            ПРОЕКТИРОВАНИЕ И ИЗГОТОВЛЕНИЕ СООТВЕТСТВУЕТ: API 6D/ISO 14313, ASME B16.34
+            РАЗМЕР СОЕДИНЕНИЯ СООТВЕТСТВУЕТ: ASME B16.5, DN EN 1092
+            ПРОЕКТИРОВАНИЕ С ОГНЕСТОЙКОСТЬЮ СООТВЕТСТВУЕТ: API 607/ISO 10497
+            ИНСПЕКЦИЯ И ИСПЫТАНИЕ СООТВЕТСТВУЕТ: API 6D, ISO 5208, API 598
+            МАТЕРИАЛ СООТВЕТСТВУЕТ: ISO 15156
+            ОСОБЕННОСТИ КОНСТРУКЦИИ: ВЕРХНИЙ ВХОД, ПОЛНЫЙ ПРОХОД, ШАРОВЫЙ КРАН С ПОДШИПНИКОМ, ДВОЙНОЙ БЛОК И СТРАВЛИВАНИЕ, ЭКСТРЕННИЙ ВПРЫСК УПЛОТНЕНИЯ, КРИОГЕННЫЙ, УДЛИНЕННЫЙ КОЛПАК, РЕДУКТОРНОЕ УПРАВЛЕНИЕ, ФЛАНЦЕВЫЕ ИЛИ СВАРНЫЕ КОНЦЫ, ДОСТУПЕН С ОПЕРАТОРОМ BG
+            ТЕМПЕРАТУРНЫЙ ДИАПАЗОН: -196°C~200°C""",
+        'image': 'images/ballv3.jpg',
+        'category': categories[2],
+    },
+    {
+        'title': 'СВАРНОЙ ШАРОВЫЙ КРАН',
+        'description': """Применимые стандарты:
+            ПРОЕКТИРОВАНИЕ И ИЗГОТОВЛЕНИЕ СООТВЕТСТВУЕТ: API 6D/ISO 14313, ASME B16.34
+            РАЗМЕР СОЕДИНЕНИЯ СООТВЕТСТВУЕТ: ASME B16.25, DIN EN 12627
+            ПРОЕКТИРОВАНИЕ С ОГНЕСТОЙКОСТЬЮ СООТВЕТСТВУЕТ: API 607/ISO 10497
+            ИНСПЕКЦИЯ И ИСПЫТАНИЕ СООТВЕТСТВУЕТ: API 6D, ISO 5208, API 598
+            МАТЕРИАЛ СООТВЕТСТВУЕТ: ISO 15156
+            ТЕМПЕРАТУРНЫЙ ДИАПАЗОН: -196°C~200°C""",
+        'image': 'images/ballv4.jpg',
+        'category': categories[2],
+    },
+    {
+        'title': 'СВАРНОЙ ШАРОВЫЙ КРАН (МЯГКОЕ И МЕТАЛЛИЧЕСКОЕ УПЛОТНЕНИЕ)',
+        'description': """Применимые стандарты:
+            ПРОЕКТИРОВАНИЕ И ИЗГОТОВЛЕНИЕ СООТВЕТСТВУЕТ: API 6D/ISO 14313, ASME B16.34
+            РАЗМЕР СОЕДИНЕНИЯ СООТВЕТСТВУЕТ: ASME B16.25, DIN EN 12627
+            ПРОЕКТИРОВАНИЕ С ОГНЕСТОЙКОСТЬЮ СООТВЕТСТВУЕТ: API 607/ISO 10497
+            ИНСПЕКЦИЯ И ИСПЫТАНИЕ СООТВЕТСТВУЕТ: API 6D, ISO 5208, API 598
+            МАТЕРИАЛ СООТВЕТСТВУЕТ: ISO 15156
+            ТЕМПЕРАТУРНЫЙ ДИАПАЗОН: -196°C~200°C""",
+        'image': 'images/ballv5.jpg',
+        'category': categories[2],
+    },
+    {
+        'title': 'СВАРНОЙ ШАРОВЫЙ КРАН (Тип 1)',
+        'description': """Применимые стандарты:
+            ПРОЕКТИРОВАНИЕ И ИЗГОТОВЛЕНИЕ СООТВЕТСТВУЕТ: API 6D/ISO 14313, ASME B16.34
+            РАЗМЕР СОЕДИНЕНИЯ СООТВЕТСТВУЕТ: ASME B16.25, DIN EN 12627
+            ПРОЕКТИРОВАНИЕ С ОГНЕСТОЙКОСТЬЮ СООТВЕТСТВУЕТ: API 607/ISO 10497
+            ИНСПЕКЦИЯ И ИСПЫТАНИЕ СООТВЕТСТВУЕТ: API 6D, ISO 5208, API 598
+            МАТЕРИАЛ СООТВЕТСТВУЕТ: ISO 15156
+            ТЕМПЕРАТУРНЫЙ ДИАПАЗОН: -196°C~200°C""",
+        'image': 'images/ballv6.jpg',
+        'category': categories[2],
+    },
     {
         'title': 'Криогенный Шаровой Клапан',
         'description': '''Криогенный шаровой клапан с удлиненным штоком предназначен для криогенных сервисов LNG. Рабочая температура от -51° до -196°C (-59,8° до -320,8°F) с конструкцией удлиненного штока. Клапаны FLOW CONTROL специально предназначены для применения в LNG и жидком азоте. Наше производство предлагает специальные решения клапанов, разработанные для соответствия криогенным процессам с учетом конструкций и материалов. Дизайн и тестирование соответствуют стандарту BS 6364.''',
@@ -114,6 +188,74 @@ products = [
           Легированная сталь ASTM A217 C5/C12''',
         'image': 'images/product11.jpg',
         'category': categories[2],
+    },
+    {
+        'title': 'API 600 ЗАТВОР',
+        'description': """Применимые стандарты:
+            Проектирование и изготовление: API 600, ASME B16.34
+            Размер соединения: ASME B16.5, ASME B16.25
+            Инспекция и испытание: API 598
+            Материал: API 600
+            Температурный диапазон: -29°C~425°C""",
+        'image': 'images/gatev1.jpg',
+        'category': categories[3],
+    },
+    {
+        'title': 'API 6D ЗАТВОР С КОЛЕСОМ',
+        'description': """Применимые стандарты:
+            Проектирование и изготовление: API 6D/ISO 14313, ASME B16.34
+            Размер соединения: ASME B16.5, DN EN 1092
+            Огнестойкое проектирование: API 607/ISO 10497
+            Инспекция и испытание: API 6D, ISO 5208, API 598
+            Материал: ISO 15156
+            Конструкция: поднимающийся шток, неподнимающееся колесо, фланцевые или сварные концы, доступен с оператором BG
+            Температурный диапазон: -196°C~200°C""",
+        'image': 'images/gatev2.jpg',
+        'category': categories[3],
+    },
+    {
+        'title': 'API СТАЛЬНОЙ ЗАТВОР КЛАСС 150~2500',
+        'description': """Применимые стандарты:
+            Проектирование и изготовление: API 600, ASME B16.34
+            Размер соединения: ASME B16.5, ASME B16.25
+            Инспекция и испытание: API 598
+            Материал: API 600
+            Температурный диапазон: -29°C~425°C""",
+        'image': 'images/gatev3.jpg',
+        'category': categories[3],
+    },
+    {
+        'title': 'API 623 ЗАПОРНЫЙ КЛАПАН',
+        'description': """Применимые стандарты:
+            Проектирование и изготовление: API 623
+            Размер соединения: ASME B16.5, ASME B16.25
+            Инспекция и испытание: API 598
+            Материал: API 600
+            Температурный диапазон: -29°C~425°C""",
+        'image': 'images/gatev4.jpg',
+        'category': categories[3],
+    },
+    {
+        'title': 'BS 1873 СТАЛЬНОЙ ЗАПОРНЫЙ КЛАПАН',
+        'description': """Применимые стандарты:
+            Проектирование и изготовление: BS 1873
+            Размер соединения: ASME B16.5, ASME B16.25
+            Инспекция и испытание: API 598
+            Материал: API 600
+            Температурный диапазон: -29°C~425°C""",
+        'image': 'images/gatev5.jpg',
+        'category': categories[3],
+    },
+    {
+        'title': 'СИЛЬФОННЫЙ ЗАПОРНЫЙ КЛАПАН',
+        'description': """Применимые стандарты:
+            Проектирование и изготовление: API 623
+            Размер соединения: ASME B16.5, ASME B16.25
+            Инспекция и испытание: API 598
+            Материал: API 600
+            Температурный диапазон: -29°C~425°C""",
+        'image': 'images/gatev6.jpg',
+        'category': categories[3],
     },
     {
         'title': 'Параллельная шиберная задвижка',
@@ -215,6 +357,72 @@ products = [
         'category': categories[4],
     },
     {
+        'title': 'API 6D BS1868 ПОВОРОТНЫЙ ОБРАТНЫЙ КЛАПАН',
+        'description': """Применимые стандарты:
+            Проектирование и изготовление: API 6D, BS 1868
+            Размер соединения: ASME B16.5, BS 1868
+            Инспекция и испытание: API 6D, BS 1868
+            Материал: API 6D, BS 1868
+            Температурный диапазон: -29°C~425°C""",
+        'image': 'images/checkv1.jpg',
+        'category': categories[5],
+    },
+    {
+        'title': 'API 6D ПОВОРОТНЫЙ ОБРАТНЫЙ КЛАПАН КЛАСС 600 LB',
+        'description': """Применимые стандарты:
+            Проектирование и изготовление: API 6D
+            Размер соединения: ASME B16.5
+            Инспекция и испытание: API 6D
+            Материал: API 6D
+            Температурный диапазон: -29°C~425°C""",
+        'image': 'images/checkv2.jpg',
+        'category': categories[5],
+    },
+    {
+        'title': 'API 600 НЕРЖАВЕЮЩИЙ СТАЛЬНОЙ ПОВОРОТНЫЙ ОБРАТНЫЙ КЛАПАН',
+        'description': """Применимые стандарты:
+            Проектирование и изготовление: API 600, ASME B16.34
+            Размер соединения: ASME B16.5, ASME B16.25
+            Инспекция и испытание: API 598
+            Материал: API 600, нержавеющая сталь
+            Температурный диапазон: -29°C~425°C""",
+        'image': 'images/checkv3.jpg',
+        'category': categories[5],
+    },
+    {
+        'title': 'ГОСТ 9544 ПОВОРОТНЫЙ ОБРАТНЫЙ КЛАПАН PN100 DN100',
+        'description': """Применимые стандарты:
+            Проектирование и изготовление: ГОСТ 9544
+            Размер соединения: ГОСТ 9544
+            Инспекция и испытание: ГОСТ 9544
+            Материал: ГОСТ 9544
+            Температурный диапазон: -29°C~425°C""",
+        'image': 'images/checkv4.jpg',
+        'category': categories[5],
+    },
+    {
+        'title': 'ГОСТ 9544 ОБРАТНЫЙ КЛАПАН PN40',
+        'description': """Применимые стандарты:
+            Проектирование и изготовление: ГОСТ 9544
+            Размер соединения: ГОСТ 9544
+            Инспекция и испытание: ГОСТ 9544
+            Материал: ГОСТ 9544
+            Температурный диапазон: -29°C~425°C""",
+        'image': 'images/checkv5.jpg',
+        'category': categories[5],
+    },
+    {
+        'title': '国标铸钢止回阀16',
+        'description': """Применимые стандарты:
+            Проектирование и изготовление: GB
+            Размер соединения: GB
+            Инспекция и испытание: GB
+            Материал: литая сталь
+            Температурный диапазон: -29°C~425°C""",
+        'image': 'images/checkv6.jpg',
+        'category': categories[5],
+    },
+    {
         'title': 'Кованый стальной обратный клапан',
         'description': '''Описание конструкции:
           ● БОЛТОВОЕ ПОКРЫТИЕ
@@ -307,6 +515,92 @@ products_en = [
         'category': categories_en[1],
     },
     {
+        'title': 'API 6D FULLY WELDED BALL VALVE',
+        'description': """Applicable Standards:
+            DESIGN & MANUFACTURE CONFORM WITH: API 6D/ISO 14313,ASME B16.34
+            CONNECTION DIMENSION CONFORMS WTIH: ASME B16.25,DIN EN 12627
+            FIRE RESISTANCE DESIGN CONFORMS WITH: API 607/ISO 10497
+            INSPECTION & TEST CONFORMS WITH: API 6D,ISO 5208,API 598
+            MATERIAL CONFORMS WITH: ISO 15156
+            TEMP RANGE: -196°C~200°C""",
+        'image': 'images/ballv1.jpg',
+        'category': categories_en[2],
+    },
+    {
+        'title': 'API 6D TOP ENTRY BALL VALVE',
+        'description': """Applicable Standards:
+            DESIGN & MANUFACTURE CONFORM WITH: API 6D/ISO 14313,ASME B16.34
+            CONNECTION DIMENSION CONFORMS WTIH: ASME B16.5,DN EN 1092
+            FIRE RESISTANCE DESIGN CONFORMS WITH: API 607/ISO 10497
+            INSPECTION & TEST CONFORMS WITH: API 6D,ISO 5208,API 598
+            MATERIAL CONFORMS WITH: ISO 15156
+            STRUCTURE FEATURES: TOP ENTRY, FULL BORE, TRUNNION MOUNTED BALL, DOUBLE BLOCK & BLEED, EMERGENCY SEALANT INJECTION, CRYOGENIC, EXTENDED BONNET, GEAR OPERATED, FLANGED OR BUTTWELDING ENDS, AVAILABLE WITH BG OPERATOR
+            TEMP RANGE: -196°C~200°C""",
+        'image': 'images/ballv2.jpg',
+        'category': categories_en[2],
+    },
+    {
+        'titel': 'API 6D TOP ENTRY BALL VALVE',
+        'description': """Applicable Standards:
+            DESIGN & MANUFACTURE CONFORM WITH: API 6D/ISO 14313,ASME B16.34
+            CONNECTION DIMENSION CONFORMS WTIH: ASME B16.5,DN EN 1092
+            FIRE RESISTANCE DESIGN CONFORMS WITH: API 607/ISO 10497
+            INSPECTION & TEST CONFORMS WITH: API 6D,ISO 5208,API 598
+            MATERIAL CONFORMS WITH: ISO 15156
+            STRUCTURE FEATURES: TOP ENTRY, FULL BORE, TRUNNION MOUNTED BALL, DOUBLE BLOCK & BLEED, EMERGENCY SEALANT INJECTION, CRYOGENIC, EXTENDED BONNET, GEAR OPERATED, FLANGED OR BUTTWELDING ENDS, AVAILABLE WITH BG OPERATOR
+            TEMP RANGE: -196°C~200°C""",
+        'image': 'images/ballv3.jpg',
+        'category': categories_en[2],
+    },
+    {
+        'title': 'WELDING BALL VALVE',
+        'description': """Applicable Standards:
+            DESIGN & MANUFACTURE CONFORM WITH: API 6D/ISO 14313,ASME B16.34
+            CONNECTION DIMENSION CONFORMS WTIH: ASME B16.25,DIN EN 12627
+            FIRE RESISTANCE DESIGN CONFORMS WITH: API 607/ISO 10497
+            INSPECTION & TEST CONFORMS WITH: API 6D,ISO 5208,API 598
+            MATERIAL CONFORMS WITH: ISO 15156
+            TEMP RANGE: -196°C~200°C""",
+        'image': 'images/ballv4.jpg',
+        'category': categories_en[2],
+    },
+    {
+        'title': 'WELDING BALL VALVE (SOFT AND METAL SEATED)',
+        'description': """Applicable Standards:
+            DESIGN & MANUFACTURE CONFORM WITH: API 6D/ISO 14313,ASME B16.34
+            CONNECTION DIMENSION CONFORMS WTIH: ASME B16.25,DIN EN 12627
+            FIRE RESISTANCE DESIGN CONFORMS WITH: API 607/ISO 10497
+            INSPECTION & TEST CONFORMS WITH: API 6D,ISO 5208,API 598
+            MATERIAL CONFORMS WITH: ISO 15156
+            TEMP RANGE: -196°C~200°C""",
+        'image': 'images/ballv5.jpg',
+        'category': categories_en[2],
+    },
+    {
+        'title': 'WELDING BALL VALVE (Type !)',
+        'description': """Applicable Standards:
+            DESIGN & MANUFACTURE CONFORM WITH: API 6D/ISO 14313,ASME B16.34
+            CONNECTION DIMENSION CONFORMS WTIH: ASME B16.25,DIN EN 12627
+            FIRE RESISTANCE DESIGN CONFORMS WITH: API 607/ISO 10497
+            INSPECTION & TEST CONFORMS WITH: API 6D,ISO 5208,API 598
+            MATERIAL CONFORMS WITH: ISO 15156
+            TEMP RANGE: -196°C~200°C""",
+        'image': 'images/ballv6.jpg',
+        'category': categories_en[2],
+    },
+    {
+        'title': 'API 6D TRUNNION BALL VALVE',
+        'description': """Applicable Standards:
+            DESIGN & MANUFACTURE CONFORM WITH: API 6D/ISO 14313,ASME B16.34
+            CONNECTION DIMENSION CONFORMS WTIH: ASME B16.5,DN EN 1092
+            FIRE RESISTANCE DESIGN CONFORMS WITH: API 607/ISO 10497
+            INSPECTION & TEST CONFORMS WITH: API 6D,ISO 5208,API 598
+            MATERIAL CONFORMS WITH: ISO 15156
+            TEMP RANGE: -196°C~200°C""",
+        'image': 'images/ballv6.jpg',
+        'category': categories_en[2],
+    },
+    {
         'title': 'Cryogenic Ball Valve',
         'description': '''RAYS cryogenic ball valve with extended bonnet ball valve will bring you a huge gain in the field of cryogenic LNG service.
           Service temperature from -51° to -196°C (-59,8° to -320,8°F) with extended bonnet design.
@@ -367,6 +661,85 @@ products_en = [
         'image': 'images/product11.jpg',
         'category': categories_en[2],
     },
+    {
+        'title': 'API 600 GATE VALVE',
+        'description': """Applicable Standards:
+            Design & Manufacture: API 600, ASME B16.34
+            Connection Dimension: ASME B16.5, ASME B16.25
+            Inspection & Test: API 598
+            Material: API 600
+            Temperature Range: -29°C~425°C""",
+        'image': 'images/gatev1.jpg',
+        'category': categories_en[3],
+    },
+    {
+        'title': 'API 6D GATE VALVE WITH HANDWHEEL',
+        'description': """Applicable Standards:
+            Design & Manufacture: API 6D/ISO 14313, ASME B16.34
+            Connection Dimension: ASME B16.5, DN EN 1092
+            Fire Resistance Design: API 607/ISO 10497
+            Inspection & Test: API 6D, ISO 5208, API 598
+            Material: ISO 15156
+            Structure: Rising stem, non-rising handwheel, flanged or butt-welding ends, available with BG operator
+            Temperature Range: -196°C~200°C""",
+        'image': 'images/gatev2.jpg',
+        'category': categories_en[3],
+    },
+    {
+        'title': 'API STEEL GATE VALVE CLASS 150~2500',
+        'description': """Applicable Standards:
+            Design & Manufacture: API 600, ASME B16.34
+            Connection Dimension: ASME B16.5, ASME B16.25
+            Inspection & Test: API 598
+            Material: API 600
+            Temperature Range: -29°C~425°C""",
+        'image': 'images/gatev3.jpg',
+        'category': categories_en[3],
+    },
+    {
+        'title': 'API 623 GLOBE VALVE',
+        'description': """Applicable Standards:
+            Design & Manufacture: API 623
+            Connection Dimension: ASME B16.5, ASME B16.25
+            Inspection & Test: API 598
+            Material: API 600
+            Temperature Range: -29°C~425°C""",
+        'image': 'images/gatev4.jpg',
+        'category': categories_en[3],
+    },
+    {
+        'title': 'BS 1873 STEEL GLOBE VALVE',
+        'description': """Applicable Standards:
+            Design & Manufacture: BS 1873
+            Connection Dimension: ASME B16.5, ASME B16.25
+            Inspection & Test: API 598
+            Material: API 600
+            Temperature Range: -29°C~425°C""",
+        'image': 'images/gatev5.jpg',
+        'category': categories_en[3],
+    },
+    {
+        'title': 'BELLOWS SEALED GLOBE VALVE',
+        'description': """Applicable Standards:
+            Design & Manufacture: API 623
+            Connection Dimension: ASME B16.5, ASME B16.25
+            Inspection & Test: API 598
+            Material: API 600
+            Temperature Range: -29°C~425°C""",
+        'image': 'images/gatev6.jpg',
+        'category': categories_en[3],
+    },
+    {
+        'title': 'PARALLEL SLIDE GATE VALVE',
+        'description': """Valve Materials:
+            Body Material: Steel, Stainless Steel
+            Disc Material: Steel, Stainless Steel
+            Sealing Rings: PTFE, Metal
+            Gaskets: Graphite, Metal
+            Temperature Range: -29°C~425°C""",
+        'image': 'images/gatev7.jpg',
+        'category': categories_en[3],
+    },     
     {
         'title': 'Parallel Slide Gate Valve',
         'description': '''VALVE MATERIALS
@@ -465,6 +838,72 @@ products_en = [
         'description': 'The RAYS pressure sealed globe valve can ensure good sealing performance under high temperature and high pressure conditions. When the RAYS pressure sealed globe valve is working, the stuffing box faces one end of the valve disc and protrudes out of the valve cover which forms an end diameter larger than its diameter. The inverse taper for the diameter of the fitting section with the valve cover is set in the annular gap formed between the conical surface of the reverse taper on the stuffing box, the inner hole of the valve body and the end surface of the valve cover facing the inside of the valve. This corresponds to the shape of the gap sealing ring. Using the above technical scheme, the pressure of the liquid medium itself is used to achieve the purpose of sealing. When the pressure fluctuates, the sealing performance is good and the sealing is reliable.',
         'image': 'images/product20.jpg',
         'category': categories_en[4],
+    },
+    {
+        'title': 'API 6D BS1868 SWING CHECK VALVE',
+        'description': """Applicable Standards:
+            Design & Manufacture: API 6D, BS 1868
+            Connection Dimension: ASME B16.5, BS 1868
+            Inspection & Test: API 6D, BS 1868
+            Material: API 6D, BS 1868
+            Temperature Range: -29°C~425°C""",
+        'image': 'images/checkv1.jpg',
+        'category': categories_en[5],
+    },
+    {
+        'title': 'API 6D SWING CHECK VALVE CLASS 600 LB',
+        'description': """Applicable Standards:
+            Design & Manufacture: API 6D
+            Connection Dimension: ASME B16.5
+            Inspection & Test: API 6D
+            Material: API 6D
+            Temperature Range: -29°C~425°C""",
+        'image': 'images/checkv2.jpg',
+        'category': categories_en[5],
+    },
+    {
+        'title': 'API 600 STAINLESS STEEL SWING CHECK VALVE',
+        'description': """Applicable Standards:
+            Design & Manufacture: API 600, ASME B16.34
+            Connection Dimension: ASME B16.5, ASME B16.25
+            Inspection & Test: API 598
+            Material: API 600, Stainless Steel
+            Temperature Range: -29°C~425°C""",
+        'image': 'images/checkv3.jpg',
+        'category': categories_en[5],
+    },
+    {
+        'title': 'GOST 9544 SWING CHECK VALVE PN100 DN100',
+        'description': """Applicable Standards:
+            Design & Manufacture: GOST 9544
+            Connection Dimension: GOST 9544
+            Inspection & Test: GOST 9544
+            Material: GOST 9544
+            Temperature Range: -29°C~425°C""",
+        'image': 'images/checkv4.jpg',
+        'category': categories_en[5],
+    },
+    {
+        'title': 'GOST 9544 CHECK VALVE PN40',
+        'description': """Applicable Standards:
+            Design & Manufacture: GOST 9544
+            Connection Dimension: GOST 9544
+            Inspection & Test: GOST 9544
+            Material: GOST 9544
+            Temperature Range: -29°C~425°C""",
+        'image': 'images/checkv5.jpg',
+        'category': categories_en[5],
+    },
+    {
+        'title': '国标铸钢止回阀16',
+        'description': """Applicable Standards:
+            Design & Manufacture: GB
+            Connection Dimension: GB
+            Inspection & Test: GB
+            Material: Cast Steel
+            Temperature Range: -29°C~425°C""",
+        'image': 'images/checkv6.jpg',
+        'category': categories_en[5],
     },
     {
         'title': 'Forged Steel Check Valve',
