@@ -5,7 +5,7 @@ from django.http import HttpResponse, Http404
 from django.contrib import messages
 import requests
 
-BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE'  # Replace with your actual bot token
+BOT_TOKEN = '7273119160:AAEzNfEopkUkmiuCKI8uMkiObu1xNEjvYsE'
 ADMIN_IDs = ['1180612659', '2367366']
 
 def validate_language(lan):
@@ -37,12 +37,11 @@ def contact_us_view(request, lan):
         email = request.POST.get('email')
         phone_number = request.POST.get('phone_number')
         special_note = request.POST.get('special_note')
-        
+
         data = f'<b>Wenzhou Feihang Flow Control Co., Ltd</b>\n<b>📋 Name:</b> {name}\n<b>📧 Email:</b> {email}\n<b>📞 Phone:</b> {phone_number}\n<b>✉️ Message:</b> {special_note}\n\nfeihangflow.com'
         url = f'https://api.telegram.org/bot{BOT_TOKEN}/sendMessage'
-        for id in ADMIN_IDs:
-            requests.post(url, data={'chat_id': id, 'text': data, 'parse_mode': 'HTML'})
-        
+        for id in ADMIN_IDs:  
+            response = requests.post(url, data={'chat_id': id, 'text': data, 'parse_mode': 'HTML'})
         # Add a success message
         messages.success(request, 'Форма успешно отправлена!')
 
