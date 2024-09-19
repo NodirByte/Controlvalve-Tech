@@ -141,3 +141,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # WhiteNoise settings
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://feihangflow.com',
+    'https://www.feihangflow.com',  # If you have both versions
+]
+CSRF_COOKIE_SECURE = True
