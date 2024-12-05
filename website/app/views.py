@@ -38,6 +38,9 @@ def contact_us_view(request, lan):
         phone_number = request.POST.get('phone_number')
         special_note = request.POST.get('special_note')
 
+        if name == "Robertnes":
+            return redirect('contact_us', lan=lan)
+
         data = f'<b>Wenzhou Feihang Flow Control Co., Ltd</b>\n<b>📋 Name:</b> {name}\n<b>📧 Email:</b> {email}\n<b>📞 Phone:</b> {phone_number}\n<b>✉️ Message:</b> {special_note}\n\nfeihangflow.com'
         url = f'https://api.telegram.org/bot{BOT_TOKEN}/sendMessage'
         for id in ADMIN_IDs:  
