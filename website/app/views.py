@@ -6,6 +6,7 @@ from django.contrib import messages
 import requests
 from django.http import HttpResponseBadRequest
 from django_ratelimit.decorators import ratelimit
+import re
 
 BOT_TOKEN = '7273119160:AAEzNfEopkUkmiuCKI8uMkiObu1xNEjvYsE'
 ADMIN_IDs = ['1180612659', '2367366']
@@ -32,26 +33,40 @@ def solutions_view(request, lan):
     current_url = request.get_full_path()[:-3]  # Get current URL path without last 3 characters
     return render(request, 'solutions.html', {'language': lan, 'current_url': current_url})
 
-@ratelimit(key='ip', rate='5/m', block=False)
+
+def verify_recaptcha(request):
+    recaptcha_response = request.POST.get('g-recaptcha-response')
+    payload = {
+        'secret': '6LfOi6UqAAAAALHiaIEcGedT6kYlqWQqX8wr13aJ',
+        'response': recaptcha_response
+    }
+    response = requests.post('https://www.google.com/recaptcha/api/siteverify', data=payload)
+    result = response.json()
+    if not result.get('success'):
+        return HttpResponseBadRequest("reCAPTCHA validation failed. Please try again.")
+    return None  # Valid reCAPTCHA response
+
 def contact_us_view(request, lan):
     if getattr(request, 'limited', False):
-        # Log or handle rate-limiting cases (e.g., send a warning message)
+        # Log or handle rate-limiting cases
         return HttpResponse('Rate limit exceeded. Please try again later.', status=429)
+    
     if request.method == 'POST':
         # Honeypot validation
         honeypot = request.POST.get('honeypot', '')
         if honeypot:
             return HttpResponseBadRequest("Bot detected!")
+        
+        # reCAPTCHA validation
+        verification = verify_recaptcha(request)
+        if verification:
+            return verification  # If reCAPTCHA fails, return error response
 
         # Retrieve form data
         name = request.POST.get('name')
         email = request.POST.get('email')
         phone_number = request.POST.get('phone_number')
         special_note = request.POST.get('special_note')
-
-        # Basic filtering for spam
-        if name.lower() in ['blockedname', 'spam', 'bot']:
-            return HttpResponseBadRequest("Suspicious activity detected!")
 
         # Send data to Telegram
         data = f'<b>Wenzhou Feihang Flow Control Co., Ltd</b>\n<b>📋 Name:</b> {name}\n<b>📧 Email:</b> {email}\n<b>📞 Phone:</b> {phone_number}\n<b>✉️ Message:</b> {special_note}\n\nfeihangflow.com'
