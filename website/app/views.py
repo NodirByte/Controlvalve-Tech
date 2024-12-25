@@ -32,8 +32,11 @@ def solutions_view(request, lan):
     current_url = request.get_full_path()[:-3]  # Get current URL path without last 3 characters
     return render(request, 'solutions.html', {'language': lan, 'current_url': current_url})
 
-@ratelimit(key='ip', rate='2/m', block=True)  # 5 requests per minute per IP
+@ratelimit(key='ip', rate='5/m', block=False)
 def contact_us_view(request, lan):
+    if getattr(request, 'limited', False):
+        # Log or handle rate-limiting cases (e.g., send a warning message)
+        return HttpResponse('Rate limit exceeded. Please try again later.', status=429)
     if request.method == 'POST':
         # Honeypot validation
         honeypot = request.POST.get('honeypot', '')
