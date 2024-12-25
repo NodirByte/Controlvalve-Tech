@@ -3,22 +3,16 @@
     <div class="col-lg-7 text-center text-lg-start">
       {% if language == 'ru' %}
       <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Бесплатная консультация</h1>
-      <p class="col-lg-10 fs-4">
-        Если вы хотите связаться с нами и сотрудничать в любом из наших услуг, пожалуйста, свяжитесь
-        с нами.
-      </p>
+      <p class="col-lg-10 fs-4">Если вы хотите связаться с нами и сотрудничать в любом из наших услуг, пожалуйста, свяжитесь с нами.</p>
       {% elif language == 'en' %}
       <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Free Consultation</h1>
-      <p class="col-lg-10 fs-4">
-        If you want to contact us and collaborate on any of our services, please reach out to us.
-      </p>
+      <p class="col-lg-10 fs-4">If you want to contact us and collaborate on any of our services, please reach out to us.</p>
       {% else %}
-      <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Consultation</h1>
-      <p class="col-lg-10 fs-4">Please contact us for any inquiries or collaborations.</p>
+      <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Консультация</h1>
+      <p class="col-lg-10 fs-4">Пожалуйста, свяжитесь с нами по любым вопросам или для сотрудничества.</p>
       {% endif %}
     </div>
     <div class="col-md-10 mx-auto col-lg-5">
-      <!-- Display messages -->
       {% if messages %}
       <div class="alert alert-success">
         {% for message in messages %}
@@ -26,73 +20,60 @@
         {% endfor %}
       </div>
       {% endif %}
-
-      <form
-        class="p-4 p-md-5 border rounded-3 bg-body-tertiary"
-        method="post"
-        action="{% url 'contact_us' lan=language %}">
+      <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" method="post" action="{% url 'contact_us' lan=language %}">
         {% csrf_token %}
+        <!-- Honeypot field -->
+        <input type="text" name="honeypot" style="display:none;" tabindex="-1" autocomplete="off">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="id_name" name="name" placeholder="name" />
+          <input type="text" class="form-control" id="id_name" name="name" placeholder="name" required />
           {% if language == 'ru' %}
           <label for="id_name">Ваше имя</label>
           {% elif language == 'en' %}
           <label for="id_name">Your Name</label>
           {% else %}
-          <label for="id_name">Name</label>
+          <label for="id_name">Имя</label>
           {% endif %}
         </div>
         <div class="form-floating mb-3">
-          <input
-            type="email"
-            class="form-control"
-            id="id_email"
-            name="email"
-            placeholder="name@example.com" />
+          <input type="email" class="form-control" id="id_email" name="email" placeholder="name@example.com" required />
           {% if language == 'ru' %}
-          <label for="id_email">Адрес электронной почты</label>
+          <label for="id_email">Электронная почта</label>
           {% elif language == 'en' %}
           <label for="id_email">Email Address</label>
           {% else %}
-          <label for="id_email">Email</label>
+          <label for="id_email">Почта</label>
           {% endif %}
         </div>
         <div class="form-floating mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="id_phone_number"
-            name="phone_number"
-            placeholder="Phone number" />
+          <input type="text" class="form-control" id="id_phone_number" name="phone_number" placeholder="Phone number" required />
           {% if language == 'ru' %}
-          <label for="id_phone_number">Ваш номер телефона</label>
+          <label for="id_phone_number">Номер телефона</label>
           {% elif language == 'en' %}
-          <label for="id_phone_number">Your Phone Number</label>
-          {% else %}
           <label for="id_phone_number">Phone Number</label>
+          {% else %}
+          <label for="id_phone_number">Телефон</label>
           {% endif %}
         </div>
         <div class="form-floating mb-3">
-          <textarea
-            class="form-control"
-            placeholder="Оставьте комментарий здесь"
-            style="height: 100px"
-            id="id_special_note"
-            name="special_note"></textarea>
+          <textarea class="form-control" placeholder="Оставьте комментарий здесь" style="height: 100px" id="id_special_note" name="special_note" required></textarea>
           {% if language == 'ru' %}
           <label for="id_special_note">Особое примечание</label>
           {% elif language == 'en' %}
           <label for="id_special_note">Special Note</label>
           {% else %}
-          <label for="id_special_note">Note</label>
+          <label for="id_special_note">Примечание</label>
           {% endif %}
         </div>
         <button class="w-100 btn btn-lg btn-primary" type="submit">
-          {% if language == 'ru' %} Отправить {% elif language == 'en' %} Submit
-          <!-- else -->
-          {% else %} Send {% endif %}
+          {% if language == 'ru' %} Отправить {% elif language == 'en' %} Submit {% else %} Отправить {% endif %}
         </button>
       </form>
     </div>
   </div>
 </div>
+<script>
+setTimeout(() => {
+  const alert = document.querySelector('.alert');
+  if (alert) alert.remove();
+}, 3000);
+</script>
