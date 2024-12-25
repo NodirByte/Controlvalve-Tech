@@ -4,6 +4,8 @@ from .services import products, categories, products_en, categories_en
 from django.http import HttpResponse, Http404
 from django.contrib import messages
 import requests
+from django.http import HttpResponseBadRequest
+from django_ratelimit.decorators import ratelimit
 
 BOT_TOKEN = '7273119160:AAEzNfEopkUkmiuCKI8uMkiObu1xNEjvYsE'
 ADMIN_IDs = ['1180612659', '2367366']
@@ -30,28 +32,36 @@ def solutions_view(request, lan):
     current_url = request.get_full_path()[:-3]  # Get current URL path without last 3 characters
     return render(request, 'solutions.html', {'language': lan, 'current_url': current_url})
 
+@ratelimit(key='ip', rate='2/m', block=True)  # 5 requests per minute per IP
 def contact_us_view(request, lan):
-    validate_language(lan)
     if request.method == 'POST':
+        # Honeypot validation
+        honeypot = request.POST.get('honeypot', '')
+        if honeypot:
+            return HttpResponseBadRequest("Bot detected!")
+
+        # Retrieve form data
         name = request.POST.get('name')
         email = request.POST.get('email')
         phone_number = request.POST.get('phone_number')
         special_note = request.POST.get('special_note')
 
-        if name == "Robertnes":
-            return redirect('contact_us', lan=lan)
+        # Basic filtering for spam
+        if name.lower() in ['blockedname', 'spam', 'bot']:
+            return HttpResponseBadRequest("Suspicious activity detected!")
 
+        # Send data to Telegram
         data = f'<b>Wenzhou Feihang Flow Control Co., Ltd</b>\n<b>📋 Name:</b> {name}\n<b>📧 Email:</b> {email}\n<b>📞 Phone:</b> {phone_number}\n<b>✉️ Message:</b> {special_note}\n\nfeihangflow.com'
         url = f'https://api.telegram.org/bot{BOT_TOKEN}/sendMessage'
         for id in ADMIN_IDs:  
             response = requests.post(url, data={'chat_id': id, 'text': data, 'parse_mode': 'HTML'})
-        # Add a success message
-        messages.success(request, 'Форма успешно отправлена!')
 
+        # Show success message and redirect
+        messages.success(request, 'Your form was submitted successfully!')
         return redirect('contact_us', lan=lan)
 
-    current_url = request.get_full_path()[:-3]  # Get current URL path without last 3 characters
-    return render(request, 'contact.html', {'language': lan, 'current_url': current_url})
+    # Render the contact form
+    return render(request, 'contact.html', {'language': lan})
 
 def category_view(request, id, lan):
     validate_language(lan)
